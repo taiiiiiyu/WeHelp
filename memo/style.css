@@ -1,0 +1,71 @@
+hr {
+  margin: 25px auto;
+  border: 5px dotted rgb(85, 85, 85);
+  border-bottom: none;
+}
+
+#box {
+  border: 5px solid rgb(85, 85, 85);
+  width: 70%;
+  margin: 2% auto;
+  padding: 10px 15px 20px 15px;
+  text-align: left;
+  background-color: rgb(251, 247, 240);
+  height: 90%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px 15px rgb(190, 186, 181);
+}
+body {
+  text-align: center;
+  background-color: rgb(205, 201, 195);
+}
+[type] {
+  width: 99%;
+  height: 30px;
+}
+#addedBtn {
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: rgb(0, 0, 0);
+  padding: 8px 46%;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+#deletedBtn {
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: rgb(214, 88, 59);
+  padding: 8px 46%;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+#addedBtn:hover {
+  background: rgba(205, 201, 195, 0.493);
+  cursor: pointer;
+}
+#deletedBtn:hover {
+  background: rgba(205, 201, 195, 0.493);
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.btn-1 {
+  flex: 1;
+}
+.btn-2 {
+  flex: 1;
+}
+.item {
+  margin: 10px auto;
+  height: 100px;
+}
