@@ -33,64 +33,56 @@
     <div id="welcome"><p>Welcome to MyHome</p></div>
 
     <div id="main">
-      <div id="promo">
-        <div class="pro">
-          <img class="image" src="NASA_logo.svg.png" />
-          <p class="proContent">NASA</p>
-        </div>
-        <div class="pro">
-          <img class="image" src="NASA_logo.svg.png" />
-          <p class="proContent">NASA</p>
-        </div>
-      </div>
-
-      <div id="content">
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-        <div class="photo">
-          <img src="week1_nasa.webp" />
-          <img class="star" src="star_icon.png" />
-          <div class="desc">By JWST</div>
-        </div>
-      </div>
+      <div id="promo"></div>
+      <div id="content"></div>
     </div>
     <script>
       function reFresh() {
         window.history.go();
       }
+
+      fetch(
+        "https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json"
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          let clist = data["result"]["results"];
+          for (let i = 0; i < 10; i++) {
+            let stitle = clist[i]["stitle"];
+            let img = clist[i]["file"].split("https");
+            let imgSite = "http" + String(img[1]);
+            let image = document.createElement("img");
+
+            if (i < 2) {
+              let promo = document.getElementById("promo");
+              let pro = document.createElement("div");
+              let image = document.createElement("img");
+              let proContent = document.createElement("p");
+
+              pro.className = "pro";
+              image.className = "image";
+              proContent.className = "proContent";
+              proContent.textContent = stitle;
+              image.src = imgSite;
+              promo.appendChild(pro);
+              pro.appendChild(image);
+              pro.appendChild(proContent);
+            } else {
+              let content = document.getElementById("content");
+              let photo = document.createElement("div");
+              let desc = document.createElement("div");
+              photo.className = "photo";
+              desc.className = "desc";
+              desc.textContent = stitle;
+              image.src = imgSite;
+              content.appendChild(photo);
+              photo.appendChild(image);
+              photo.appendChild(desc);
+            }
+          }
+        });
     </script>
   </body>
 </html>
