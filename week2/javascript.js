@@ -1,7 +1,7 @@
 // 1.
 function calculate(min, max, step) {
-  sum = 0;
-  i = min;
+  let sum = 0;
+  let i = min;
   while (i <= max) {
     sum += i;
     i = i + step;
@@ -14,7 +14,7 @@ calculate(-1, 2, 2);
 
 // 2
 function avg(data) {
-  salaryAll = 0;
+  let sum = 0;
   for (let i = 0; i < data.employees.length; i++) {
     let obj = data.employees[i];
     if (!obj.manager) {
