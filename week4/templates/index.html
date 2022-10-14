@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="week4assignment" />
+    <meta name="author" content="carol wang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{{
+    url_for("static",filename="style.css")}} "/>
+    <title>首頁</title>
+  </head>
+  <body>
+    <h1>HI!請輸入帳號密碼</h1>
+    <div id="content">
+      登入系統
+      <div>
+        <form action="/signin" method="POST">
+          帳號 <input type="text" name="nameData" />
+          <br />
+          密碼 <input type="password" name="passwordData" />
+          <br />
+          <button id="click">登入</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

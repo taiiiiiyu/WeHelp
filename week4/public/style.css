@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(252, 255, 231);
+  font-size: 20px;
+  text-align: center;
+}
+h1 {
+  background-color: rgb(206, 148, 97);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin: -10px;
+  padding: 80px 50px;
+}
+#content {
+  background-color: rgb(224, 216, 176);
+  text-align: center;
+  width: 400px;
+  margin: 90px auto;
+  padding: 20px;
+}
+#click {
+  background-color: rgb(224, 216, 176);
+  height: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-color: gray;
+}
+
+a {
+  cursor: pointer;
+}
