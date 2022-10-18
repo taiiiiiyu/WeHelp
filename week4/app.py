@@ -46,6 +46,21 @@ def signout():
     del session["nameData"]
     return redirect("/")
 
+# @app.route("/square/<number>",methods=["POST"])
+# def square(number):
+#     num=request.form["numberData"]
+#     number=num
+#     # number=str(num)
+#     return number
 
+# @app.route("/square/<number>")
+# def square(number):
+#     return number
+
+@app.route("/square",methods=["POST"])
+def square():
+    num=request.form["numberData"]
+    print(type(num))
+    return 
 
 app.run(port=3000)
