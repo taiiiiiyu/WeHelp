@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>會員系統</title>
+  </head>
+  <body>
+    <div>
+      {{session["username"]}}，歡迎回來
+      <br />
+      <a href="{{url_for('static',filename='giphy.gif')}} " />
+    </div>
+    <form action="/signout">
+      <button>登出系統</button>
+    </form>
+  </body>
+</html>

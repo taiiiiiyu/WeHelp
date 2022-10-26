@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="week4assignment" />
+    <meta name="author" content="carol wang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{
+    url_for('static',filename='style.css')}} "
+    />
+    <title>首頁</title>
+  </head>
+  <body>
+    <div class="signin">
+        <div>
+            <div>會員登入</div>
+            <div>
+                <form action="/signin" method="POST">
+                    帳號 <input type="text" name="usernameData"/>
+                    <br/>
+                    密碼 <input type="password" name="passwordData"/>
+                    <br/>
+                    <button>登入</button>
+                </form>
+            </div>
+        </div>
+        <dic class="switch-0">尚未註冊，註冊會員</div>
+    </div>
+    <div class="signup hidden">
+        <div>
+            <div>註冊會員</div>
+            <div>
+                <form action="/signup" method="POST">
+                    姓名 <input type="text" name="nameData"/>
+                    <br/>
+                    帳號 <input type="text" name="usernameData"/>
+                    <br/>
+                    密碼 <input type="password" name="passwordData"/>
+                    <br/>
+                    <button>註冊</button>
+                </form>
+            </div>
+        </div>
+        <div class="switch-1">已有會員，會員登入</div>
+    </div>
+    <script src="{{ url_for('static', filename='javascript.js') }}"></script>
+  </body>
+</html>
