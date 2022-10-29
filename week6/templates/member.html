@@ -2,16 +2,22 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{
+    url_for('static',filename='style.css')}} "
+    />
     <title>會員系統</title>
   </head>
   <body>
-    <div>
+    <div id="msg">
       {{session["username"]}}，歡迎回來
       <br />
-      <a href="{{url_for('static',filename='giphy.gif')}} " />
+      <img src="{{url_for('static',filename='giphy.gif')}} " ></img>
     </div>
     <form action="/signout">
-      <button>登出系統</button>
+      <button class="btn">登出系統</button>
     </form>
   </body>
 </html>

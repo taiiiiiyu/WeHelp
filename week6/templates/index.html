@@ -13,25 +13,25 @@
     <title>首頁</title>
   </head>
   <body>
-    <div class="signin">
-        <div>
-            <div>會員登入</div>
-            <div>
+    <div class="signin main">
+        <div class="content">
+            <div class="title">會員登入</div>
+            <div class="input">
                 <form action="/signin" method="POST">
                     帳號 <input type="text" name="usernameData"/>
                     <br/>
                     密碼 <input type="password" name="passwordData"/>
                     <br/>
-                    <button>登入</button>
+                    <button class="btn">登入</button>
                 </form>
             </div>
         </div>
-        <dic class="switch-0">尚未註冊，註冊會員</div>
+        <div class="switchBtn switch-0">尚未註冊，註冊會員</div>
     </div>
-    <div class="signup hidden">
-        <div>
-            <div>註冊會員</div>
-            <div>
+    <div class="signup hidden main">
+        <div class="content">
+            <div class="title">註冊會員</div>
+            <div class="input">
                 <form action="/signup" method="POST">
                     姓名 <input type="text" name="nameData"/>
                     <br/>
@@ -39,11 +39,11 @@
                     <br/>
                     密碼 <input type="password" name="passwordData"/>
                     <br/>
-                    <button>註冊</button>
+                    <button class="btn">註冊</button>
                 </form>
             </div>
         </div>
-        <div class="switch-1">已有會員，會員登入</div>
+        <div class="switchBtn switch-1">已有會員，會員登入</div>
     </div>
     <script src="{{ url_for('static', filename='javascript.js') }}"></script>
   </body>
