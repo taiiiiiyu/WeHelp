@@ -39,18 +39,17 @@ def signin():
     passwordData=request.form["passwordData"]
     mycursor=mydb.cursor()
     mycursor.execute("SELECT * FROM member WHERE username =%s",(usernameData,))
-    userN=mycursor.fetchone()
-    mycursor.execute("SELECT * FROM member WHERE password =%s",(passwordData,))
-    userP=mycursor.fetchone()
+    user=mycursor.fetchone()
+    if user==None:
+        return redirect("/error?message=沒有此帳號")
+    userN=user[1]
+    userP=user[3]
     if usernameData=="" or passwordData == "":
         return redirect("/error?message=請輸入帳號、密碼")
-    elif userN!=None and userP!=None:
+    elif userN==usernameData and userP==passwordData :
         session["username"]=usernameData
         return redirect("/member")
-    elif userN==None:
-        return redirect("/error?message=沒有此帳號")
-    else:
-        return redirect("/error?message=帳號、或密碼輸入錯誤")
+    return redirect("/error?message=帳號、或密碼輸入錯誤")
 
 #驗證註冊網址
 @app.route("/signup",methods=["POST"])
