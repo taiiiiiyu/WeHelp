@@ -1,0 +1,86 @@
+body {
+  background-color: rgb(120, 149, 178);
+  text-align: center;
+  margin: 100px auto;
+  margin: 50px auto 100px auto;
+}
+
+.main {
+  text-align: center;
+  margin: 15px auto;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content {
+  height: 300px;
+  width: 320px;
+  background-color: rgb(174, 189, 202);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.title {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(232, 223, 202);
+  padding-top: 20px;
+  font-size: 20px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.input {
+  width: 100%;
+}
+
+.result {
+  margin: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.btn {
+  height: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-color: gray;
+  background-color: rgb(245, 239, 230);
+}
+.switchBtn {
+  position: relative;
+  top: 20px;
+}
+
+.switchBtn:hover {
+  color: rgb(232, 223, 202);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#msg {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  width: 500px;
+  height: 390px;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+#msgTitle {
+  margin: 0px;
+}
+
+img {
+  width: 350px;
+}

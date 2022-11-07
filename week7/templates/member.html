@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{
+    url_for('static',filename='style.css')}} "
+    />
+    <title>會員系統</title>
+  </head>
+  <body>
+    <div id="msg">
+      <p id="msgTitle">{{session["name"]}}，歡迎回來</p>
+      <br />
+      <img src="{{url_for('static',filename='giphy.gif')}} " ></img>
+    </div>
+    <div class="main">
+      <div class="content">
+        <div class="title">查詢會員姓名</div>
+          <div class="input">
+                  帳號 <input type="text" name="username" class="search" value=""/>
+                  <br/>
+                  <button class="btn search" onclick="search()">查詢</button>
+          </div>
+          <div class="searchResult result"></div>
+        </div >
+      </div>
+    </div>
+    <div class="main">
+      <div class="content">
+        <div class="title">更改我的姓名</div>
+          <div class="input">
+                  姓名 <input type="text" name="username" class="update" value=""/>
+                  <br/>
+                  <button class="btn update" onclick="update()">更新</button>
+          </div>
+          <div class="updateResult result"></div>
+        </div >
+      </div>  
+    </div>
+    <form action="/signout">
+      <button class="btn">登出系統</button>
+    </form>
+    <script src="{{ url_for('static', filename='javascript.js') }}"></script>
+  </body>
+</html>

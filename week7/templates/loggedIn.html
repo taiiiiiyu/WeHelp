@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{
+    url_for('static',filename='style.css')}} "
+    />
+    <title>會員系統</title>
+  </head>
+  <body>
+    <div id="msg">
+      <p id="msgTitle">{{session["username"]}}，已登入 <span class="timeBox"></span></p>
+      
+    <br />
+    <img src="{{url_for('static',filename='giphy(2).gif')}} " ></img>
+    </div>
+    <a href="/member" class="switchBtn">回會員中心</a>
+    <script >
+        var count = 5;
+        function countDown() {
+        document.querySelector(".timeBox").innerHTML = ` (${count}) `;
+        count -= 1;
+        if (count == 0) {
+        location.href = "http://127.0.0.1:3000/member";
+        }
+        setTimeout("countDown()", 1000);
+        }
+        countDown();
+    </script>
+  </body>
+</html>
